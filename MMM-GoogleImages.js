@@ -21,7 +21,7 @@ Module.register("MMM-GoogleImages", {
         if (notification === "Image") {
             //Log.error('received')
             this.imageURL = payload[Math.floor(Math.random() * payload.length)];
-            this.updateDom();
+            this.updateDom(2.5 * 1000); // sets speed animation
         }
     },
 
@@ -30,6 +30,7 @@ Module.register("MMM-GoogleImages", {
         let image = document.createElement("IMG");
         image.width = 400;
         image.height = 400;
+        image.style = 'border-radius: 5%'; //style the corners
         image.src = this.imageURL;
         wrapper.appendChild(image);
         return wrapper;
