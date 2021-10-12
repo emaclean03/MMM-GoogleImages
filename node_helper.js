@@ -3,7 +3,7 @@ const request = require("request");
 const Log = require("../../js/logger");
 
 module.exports = NodeHelper.create({
-
+    //hacktober fest
     socketNotificationReceived: function(notification, payload){
         /*Sends the payload back to broadcast to clients*/
         var self = this;
